@@ -11,6 +11,10 @@ website:
       - about.qmd
       - href: projects.qmd
         text: Projects
+      - href: favorites.qmd
+        text: Favorite Hobbies, Interests, Classes
+      - href: resume.qmd
+        text: Resume
     
 
 format:
