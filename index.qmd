@@ -1,11 +1,17 @@
 ---
-title: "wywydubs.github.io"
+title: "Wyatt Dunn"
+format: html
+about:
+  template: jolla
+  image: images/IMG_4896.jpg
+  image-shape: round
+  image-width: 17em
+  links:
+    - text: GitHub
+      href: https://github.com/wywydubs
+    - text: Email
+      href: mailto:wyattdone13@gmail.com
+toc: false
 ---
 
-This is a Quarto website.
-
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
-
-```{r}
-1 + 1
-```
+Hello! I'm Wyatt, a rising 3rd year at the University of California, Santa Barbara. I am working towards a double major in Environmental Studies (B.A.) and Economics (B.A.). I enjoy playing Ultimate Frisbee (it's not anything like disc golf) running around outside, and supporting anything bay area sports. I'm excited to keep pursuing things that connect my interests of money and the environment, and make the two less antithetical from one another. Welcome to my website!
