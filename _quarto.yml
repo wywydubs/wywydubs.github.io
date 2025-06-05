@@ -3,7 +3,7 @@ project:
   output-dir: docs
 
 website:
-  title: "wywydubs.github.io"
+  title: "Wyatt Dunn"
   navbar:
     left:
       - href: index.qmd
