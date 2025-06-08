@@ -13,5 +13,40 @@ This playlist contains some stuff I definitely wouldn’t throw on at a party, a
 
 <div style="display: flex; justify-content: center; margin-top: 1em;">
 <iframe style="border-radius:16px; box-shadow: 0 4px 10px rgba(0,0,0,0.2);" src="https://open.spotify.com/embed/playlist/74pQsT3ECo5eEU2Dju0joo?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+</iframe>
+  </div>
 
+## 🥏 Frisbee!!
+
+Ultimate frisbee is a huge part of my life, especially when it comes to diving for a disc (commonly referred to as laying out). Here's a couple pictures of me risking abdominal injury and the rest of my team!
+ 
+<div style="
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  justify-content: center;
+  margin-top: 1em;
+">
+  <img src="frisbee/frisbee1.JPG" alt="Frisbee photo 1" style="width: 300px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
+  <img src="frisbee/frisbee2.JPG" alt="Frisbee photo 2" style="width: 300px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
+  <img src="frisbee/frisbee3.PNG" alt="Frisbee photo 3" style="width: 300px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
+  <img src="frisbee/frisbee4.JPG" alt="Frisbee photo 4" style="width: 300px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
+</div>
+
+## ⚾ Sports!!
+
+I could talk about and watch sports all day every day. I'm a diehard 49ers, Giants, and Warriors fan, and tend to spend any money I have laying around on going to games! Here are some pictures of me supporting my teams in person over the years. 
+
+<div style="
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+  margin-top: 1em;
+  flex-wrap: wrap;
+">
+  <img src="sports/sports1.JPG" alt="Sports photo 1" style="width: 22%; max-width: 300px; height: auto; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
+  <img src="sports/sports2.png" alt="Sports photo 2" style="width: 30%; max-width: 300px; height: auto; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
+  <img src="sports/sports3.JPG" alt="Sports photo 3" style="width: 22%; max-width: 300px; height: auto; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
+  <img src="sports/sports4.JPG" alt="Sports photo 4" style="width: 22%; max-width: 300px; height: auto; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
+</div>
 ---

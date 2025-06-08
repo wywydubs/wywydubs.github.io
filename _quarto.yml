@@ -12,7 +12,7 @@ website:
       - href: projects.qmd
         text: Projects
       - href: favorites.qmd
-        text: Favorite Hobbies, Interests, Classes
+        text: Favorite Hobbies and Interests
       - href: resume.qmd
         text: Resume
     
