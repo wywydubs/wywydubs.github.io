@@ -2,9 +2,29 @@
 title: "About"
 ---
 
-About this site
+---
+title: "About"
+---
 
-```{r}
-1 + 1
-usethis::use_git()
-```
+<div style="
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  gap: 1em;
+  margin-top: 1em;
+">
+  <img src="aboutpics/about1.jpeg" alt="About photo 1" style="height: 180px; width: auto; aspect-ratio: 1 / 1; object-fit: cover; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
+  <img src="aboutpics/about2.jpeg" alt="About photo 2" style="height: 180px; width: auto; aspect-ratio: 1 / 1; object-fit: cover; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
+  <img src="aboutpics/about3.jpeg" alt="About photo 3" style="height: 180px; width: auto; aspect-ratio: 1 / 1; object-fit: cover; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
+  <img src="aboutpics/about4.PNG" alt="About photo 4"
+  style="height: 180px; width: auto;
+         aspect-ratio: 1 / 1;
+         object-fit: cover;
+         object-position: center top;
+         border-radius: 10px;
+         box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
+  <img src="aboutpics/about5.JPEG" alt="About photo 5" style="height: 180px; width: auto; aspect-ratio: 1 / 1; object-fit: cover; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
+  <img src="aboutpics/about6.JPG" alt="About photo 5" style="height: 180px; width: auto; aspect-ratio: 1 / 1; object-fit: cover; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
+</div>
+
+
