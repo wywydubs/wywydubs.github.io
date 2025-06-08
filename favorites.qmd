@@ -18,19 +18,30 @@ This playlist contains some stuff I definitely wouldn’t throw on at a party, a
 
 ## 🥏 Frisbee!!
 
-Ultimate frisbee is a huge part of my life, especially when it comes to diving for a disc (commonly referred to as laying out). Here's a couple pictures of me risking abdominal injury and the rest of my team!
+Ultimate frisbee is a huge part of my life, especially when it comes to diving and blocking a disc (commonly referred to as laying out). Here's a couple pictures of me risking abdominal injury and the rest of my team!
  
 <div style="
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 1em;
-  justify-content: center;
   margin-top: 1em;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
 ">
-  <img src="frisbee/frisbee1.JPG" alt="Frisbee photo 1" style="width: 300px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
-  <img src="frisbee/frisbee2.JPG" alt="Frisbee photo 2" style="width: 300px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
-  <img src="frisbee/frisbee3.PNG" alt="Frisbee photo 3" style="width: 300px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
-  <img src="frisbee/frisbee4.JPG" alt="Frisbee photo 4" style="width: 300px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
+
+  <img src="frisbee/frisbee1.JPG" alt="Frisbee photo 1" 
+       style="width: 100%; max-width: 300px; height: auto; 
+              border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
+  <img src="frisbee/frisbee2.JPG" alt="Frisbee photo 2" 
+       style="width: 100%; max-width: 300px; height: auto; 
+              border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
+  <img src="frisbee/frisbee3.PNG" alt="Frisbee photo 3" 
+       style="width: 100%; max-width: 300px; height: auto; 
+              border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
+  <img src="frisbee/frisbee4.JPG" alt="Frisbee photo 4" 
+       style="width: 100%; max-width: 300px; height: auto; 
+              border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
 </div>
 
 ## ⚾ Sports!!
