@@ -1,4 +1,17 @@
 ---
 title: "Favorite Hobbies, Classes, and Interests"
 format: html
+embed-resources: true
+
+---
+
+## 🎧 Music!!
+
+
+I love all sorts of music, and recently, I’ve been listening to some pretty unique stuff.
+This playlist contains some stuff I definitely wouldn’t throw on at a party, as it certainly has some unique stylistic qualities. Check it out if you would like!
+
+<div style="display: flex; justify-content: center; margin-top: 1em;">
+<iframe style="border-radius:16px; box-shadow: 0 4px 10px rgba(0,0,0,0.2);" src="https://open.spotify.com/embed/playlist/74pQsT3ECo5eEU2Dju0joo?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+
 ---
