@@ -60,14 +60,14 @@
     "href": "about.html#what-am-i-looking-forward-to",
     "title": "About",
     "section": "What am I looking forward to?",
-    "text": "What am I looking forward to?\nI’m excited to continue my upper division learning within Environmental Studies, and progress further in my Economics path. I’m hoping to find an internship next school year that intersects those two. I also can’t wait to play for our local club ultimate frisbee team this summer and fall, Offshore Ultimate!!"
+    "text": "What am I looking forward to?\nI’m excited to continue my upper division learning within Environmental Studies, and progress further in my Economics path. I’m hoping to find an internship next school year that intersects those two. I also can’t wait to play for our local club ultimate frisbee team this summer and fall, Offshore Ultimate!"
   },
   {
     "objectID": "projects.html",
     "href": "projects.html",
     "title": "Projects",
     "section": "",
-    "text": "193PE: Politcal Ecology of World Cups Final Presentation\n\n\nA final group presentation exploring the ecological implications of mega-events using Brazil and South Africa as case studies, using a Political Ecology lense.\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "193DS: Homework 3\n\n\nA homework assignment in R Studio that required graph and table data visualization, affective data visualization, and statistical critique. A very challenging assignment…\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n193PE: Politcal Ecology of World Cups Final Presentation\n\n\nA final group presentation exploring the ecological implications of mega-events using Brazil and South Africa as case studies, using a Political Ecology lense.\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "projects/worldcup.html",
@@ -75,5 +75,187 @@
     "title": "193PE: Politcal Ecology of World Cups Final Presentation",
     "section": "",
     "text": "Completed in Spring 2025, the culminating class for Environmental Studies 193PE (Introduction to Political Ecology), was to investigate and present a ~20 minute research question in relation to any given environmental topic. Along with this, subsequent application of Political Ecology concepts to the topic were required, drawing on Paul Robbin’s “Political Ecology: A Critical Introduction (2019)” found here."
+  },
+  {
+    "objectID": "projects/HW3.html",
+    "href": "projects/HW3.html",
+    "title": "193DS: Homework 3",
+    "section": "",
+    "text": "GitHub repo: https://github.com/wywydubs/ENVS-193DS_homework-03"
+  },
+  {
+    "objectID": "projects/HW3.html#a.-data-summarizing",
+    "href": "projects/HW3.html#a.-data-summarizing",
+    "title": "193DS: Homework 3",
+    "section": "a. Data Summarizing",
+    "text": "a. Data Summarizing\nI could compare the average time it took to get out of bed comparing alarm used versus not used. I would want to know if getting out of bed after a natural wake up could be different on average than from an alarm, as there are different factors like morning obligations hence an alarm versus less grogginess from waking up naturally. This comparison could be done by finding the mean of days with alarm use and the mean of no alarm use, and it could inform me more about the impact of alarms on my morning routine."
+  },
+  {
+    "objectID": "projects/HW3.html#b.-visualization",
+    "href": "projects/HW3.html#b.-visualization",
+    "title": "193DS: Homework 3",
+    "section": "b. Visualization",
+    "text": "b. Visualization\n\nmessage = FALSE # hide messages\nwarning = FALSE # hide warning\n\nsleep_log &lt;- read_csv(\"../ENVS-193DS_homework-03/data/sleep_log.csv\") #read in data\n\n\nggplot(sleep_log, aes(x = `Alarm used?`, # set x and y\n                      y = `Time it took to get out of bed (min)`)) +\n  geom_jitter(width = 0.2, height = 0, aes(color = `Alarm used?`)) +\n  stat_summary(fun = mean, geom = \"point\", \n               shape = 18, size = 4, color = \"black\") + # add in mean\n  stat_summary(fun.data = mean_se, geom = \"errorbar\", \n               width = 0.2, color = \"black\") + #add in error bars\n  labs(\n    title = \"Minutes to Get Out of Bed with vs without Alarm\", \n    x = \"Alarm Used?\",\n    y = \"Minutes to Get Out of Bed\"\n    # change title + x and y titles\n  ) +\n  scale_color_manual(values = c(\"Yes\" = \"deeppink\", \"No\" = \"purple\")) +\n  theme_minimal()\n\n\n\n\n\n\n\n# change theme to minimal and add color to values"
+  },
+  {
+    "objectID": "projects/HW3.html#c.-caption",
+    "href": "projects/HW3.html#c.-caption",
+    "title": "193DS: Homework 3",
+    "section": "c. Caption",
+    "text": "c. Caption\nFigure 1, above, titled “Minutes to Get Out of Bed”, with two jitterplots, purple circular points representing days where alarms were not used and pink circular points representing days when an alarm was used. The y axis represents how long it took to get out of bed, and the mean for each group is represented by a black diamond with error bars represented by black bars."
+  },
+  {
+    "objectID": "projects/HW3.html#d.-table-presentation",
+    "href": "projects/HW3.html#d.-table-presentation",
+    "title": "193DS: Homework 3",
+    "section": "d. Table Presentation",
+    "text": "d. Table Presentation\n\nsummary_table &lt;- sleep_log |&gt; # assign to sleep log\n  group_by(`Alarm used?`) |&gt;  # set categories\n  summarise(\n    `Average time to get out of bed (min)` = \n      round(mean(`Time it took to get out of bed (min)`, na.rm = TRUE), 1), \n    # round data to one decimal point\n    sample = n() # add in sample size\n  )\n# Display with gt\nsummary_table |&gt; \n  gt() |&gt;  #use gt\n  tab_header(\n    title = \"Average Time to Get Out of Bed\", # set title\n    subtitle = \"Grouped by Alarm Use\" #set subtitle\n  )\n\n\n\n\n\n\n\nAverage Time to Get Out of Bed\n\n\nGrouped by Alarm Use\n\n\nAlarm used?\nAverage time to get out of bed (min)\nsample\n\n\n\n\nNo\n14.2\n12\n\n\nYes\n11.5\n11"
+  },
+  {
+    "objectID": "projects/HW3.html#a.-description",
+    "href": "projects/HW3.html#a.-description",
+    "title": "193DS: Homework 3",
+    "section": "a. Description",
+    "text": "a. Description\nAn affective visualization for my data could go a variety of ways. I think it probably be focused around two very contrasting styles, maybe a jagged blue landscape with a darkened ghoul of some sort to represent days which require an alarm wakeup. This could be contrasted by a smooth, warm hued style with a peaceful visually appealing creature in order to represent a natural wakeup. This would evoke an emotional response to my topic that data obviously couldn’t convey. I want to do this and highlight the fact that besides my alarm wakeup, the data looks exactly the same, but the emotion behind it is very different."
+  },
+  {
+    "objectID": "projects/HW3.html#b.-sketch",
+    "href": "projects/HW3.html#b.-sketch",
+    "title": "193DS: Homework 3",
+    "section": "b. Sketch",
+    "text": "b. Sketch\n\nknitr::include_graphics(\"../ENVS-193DS_homework-03/code/sketch1.png\")# insert image"
+  },
+  {
+    "objectID": "projects/HW3.html#c.-draft-of-visualization",
+    "href": "projects/HW3.html#c.-draft-of-visualization",
+    "title": "193DS: Homework 3",
+    "section": "c. Draft of Visualization",
+    "text": "c. Draft of Visualization\n\nknitr::include_graphics(\"../ENVS-193DS_homework-03/code/IMG_0020.jpg\") # insert image"
+  },
+  {
+    "objectID": "projects/HW3.html#d.-artist-statement",
+    "href": "projects/HW3.html#d.-artist-statement",
+    "title": "193DS: Homework 3",
+    "section": "d. Artist Statement",
+    "text": "d. Artist Statement\nThis piece shows the hidden emotion behind what appears to be very similar data, via a gradient with a ghoulish creature on one side with sharp, jagged, tortured surroundings to represent waking up with an alarm and a calm peaceful gnome with smooth features and background to represent waking up naturally, with similar wake up times and times to get out of bed I used some reference photos for the creatures from online but there wasn’t really any outside influence or style. The closest would be some form of dark fantasy style? The form of the work is on a drawing app using an apple pen. I create this by making the gradient background and then drawing on it using the app."
+  },
+  {
+    "objectID": "projects/HW3.html#a.-revise-and-summarize",
+    "href": "projects/HW3.html#a.-revise-and-summarize",
+    "title": "193DS: Homework 3",
+    "section": "a. Revise and Summarize",
+    "text": "a. Revise and Summarize\nThe authors used panel data regression estimated using Ordinary Least Squares (OLS). Response variable is renewable electricity production and the predictor is Islam financing and Sukuk.\n\nknitr::include_graphics(\"../ENVS-193DS_homework-03/code/islam_table.png\") #add in islam image"
+  },
+  {
+    "objectID": "projects/HW3.html#b.-visual-clarity",
+    "href": "projects/HW3.html#b.-visual-clarity",
+    "title": "193DS: Homework 3",
+    "section": "b. Visual Clarity",
+    "text": "b. Visual Clarity\nThe table clearly represents the data underlying the statistical tests, and each column labeled and values are super precise. It includes coefficients, standard errors, t-statistics, p-values, and significance levels, which help to interpret the reliability of the work. The formatting is clean and makes it easy to compare variables."
+  },
+  {
+    "objectID": "projects/HW3.html#c.-aesthetic-clarity",
+    "href": "projects/HW3.html#c.-aesthetic-clarity",
+    "title": "193DS: Homework 3",
+    "section": "c. Aesthetic Clarity",
+    "text": "c. Aesthetic Clarity\nThe aesthetic is and clean and doesn’t have too many grid lines, while important p values are highlighted nicely using asterisks, and the data is nicely spaced. The precise nature of the data can be a little overwhelming with all of the decimals, but it is still manageable."
+  },
+  {
+    "objectID": "projects/HW3.html#d.-suggestions",
+    "href": "projects/HW3.html#d.-suggestions",
+    "title": "193DS: Homework 3",
+    "section": "d. Suggestions",
+    "text": "d. Suggestions\nConfidence intervals might help the data, and potentially coloring or bolding really important values could assist them further in getting their point across. For more readability, a key with definitions for all of the words could be of worth as well."
+  },
+  {
+    "objectID": "ENVS-193DS_homework-03/code/codehw3.html",
+    "href": "ENVS-193DS_homework-03/code/codehw3.html",
+    "title": "codehw3",
+    "section": "",
+    "text": "GitHub repo: https://github.com/wywydubs/ENVS-193DS_homework-03\nmessage = FALSE # hide messages\nwarning = FALSE # hide warning\n\n\nlibrary(tidyverse) # Load packages\nlibrary(here)\nlibrary(gt) # chose gt\n\nlibrary(janitor) # Optional packages\nlibrary(readxl)\nlibrary(readr)"
+  },
+  {
+    "objectID": "ENVS-193DS_homework-03/code/codehw3.html#a.-data-summarizing",
+    "href": "ENVS-193DS_homework-03/code/codehw3.html#a.-data-summarizing",
+    "title": "codehw3",
+    "section": "a. Data Summarizing",
+    "text": "a. Data Summarizing\nI could compare the average time it took to get out of bed comparing alarm used versus not used. I would want to know if getting out of bed after a natural wake up could be different on average than from an alarm, as there are different factors like morning obligations hence an alarm versus less grogginess from waking up naturally. This comparison could be done by finding the mean of days with alarm use and the mean of no alarm use, and it could inform me more about the impact of alarms on my morning routine."
+  },
+  {
+    "objectID": "ENVS-193DS_homework-03/code/codehw3.html#b.-visualization",
+    "href": "ENVS-193DS_homework-03/code/codehw3.html#b.-visualization",
+    "title": "codehw3",
+    "section": "b. Visualization",
+    "text": "b. Visualization\n\nmessage = FALSE # hide messages\nwarning = FALSE # hide warning\n\nsleep_log &lt;- read_csv(\"../data/sleep_log.csv\") #read in data\n\n\nggplot(sleep_log, aes(x = `Alarm used?`, # set x and y\n                      y = `Time it took to get out of bed (min)`)) +\n  geom_jitter(width = 0.2, height = 0, aes(color = `Alarm used?`)) +\n  stat_summary(fun = mean, geom = \"point\", \n               shape = 18, size = 4, color = \"black\") + # add in mean\n  stat_summary(fun.data = mean_se, geom = \"errorbar\", \n               width = 0.2, color = \"black\") + #add in error bars\n  labs(\n    title = \"Minutes to Get Out of Bed with vs without Alarm\", \n    x = \"Alarm Used?\",\n    y = \"Minutes to Get Out of Bed\"\n    # change title + x and y titles\n  ) +\n  scale_color_manual(values = c(\"Yes\" = \"deeppink\", \"No\" = \"purple\")) +\n  theme_minimal()\n\n\n\n\n\n\n\n# change theme to minimal and add color to values"
+  },
+  {
+    "objectID": "ENVS-193DS_homework-03/code/codehw3.html#c.-caption",
+    "href": "ENVS-193DS_homework-03/code/codehw3.html#c.-caption",
+    "title": "codehw3",
+    "section": "c. Caption",
+    "text": "c. Caption\nFigure 1, above, titled “Minutes to Get Out of Bed”, with two jitterplots, purple circular points representing days where alarms were not used and pink circular points representing days when an alarm was used. The y axis represents how long it took to get out of bed, and the mean for each group is represented by a black diamond with error bars represented by black bars."
+  },
+  {
+    "objectID": "ENVS-193DS_homework-03/code/codehw3.html#d.-table-presentation",
+    "href": "ENVS-193DS_homework-03/code/codehw3.html#d.-table-presentation",
+    "title": "codehw3",
+    "section": "d. Table Presentation",
+    "text": "d. Table Presentation\n\nsummary_table &lt;- sleep_log |&gt; # assign to sleep log\n  group_by(`Alarm used?`) |&gt;  # set categories\n  summarise(\n    `Average time to get out of bed (min)` = \n      round(mean(`Time it took to get out of bed (min)`, na.rm = TRUE), 1), \n    # round data to one decimal point\n    sample = n() # add in sample size\n  )\n# Display with gt\nsummary_table |&gt; \n  gt() |&gt;  #use gt\n  tab_header(\n    title = \"Average Time to Get Out of Bed\", # set title\n    subtitle = \"Grouped by Alarm Use\" #set subtitle\n  )\n\n\n\n\n\n\n\nAverage Time to Get Out of Bed\n\n\nGrouped by Alarm Use\n\n\nAlarm used?\nAverage time to get out of bed (min)\nsample\n\n\n\n\nNo\n14.2\n12\n\n\nYes\n11.5\n11"
+  },
+  {
+    "objectID": "ENVS-193DS_homework-03/code/codehw3.html#a.-description",
+    "href": "ENVS-193DS_homework-03/code/codehw3.html#a.-description",
+    "title": "codehw3",
+    "section": "a. Description",
+    "text": "a. Description\nAn affective visualization for my data could go a variety of ways. I think it probably be focused around two very contrasting styles, maybe a jagged blue landscape with a darkened ghoul of some sort to represent days which require an alarm wakeup. This could be contrasted by a smooth, warm hued style with a peaceful visually appealing creature in order to represent a natural wakeup. This would evoke an emotional response to my topic that data obviously couldn’t convey. I want to do this and highlight the fact that besides my alarm wakeup, the data looks exactly the same, but the emotion behind it is very different."
+  },
+  {
+    "objectID": "ENVS-193DS_homework-03/code/codehw3.html#b.-sketch",
+    "href": "ENVS-193DS_homework-03/code/codehw3.html#b.-sketch",
+    "title": "codehw3",
+    "section": "b. Sketch",
+    "text": "b. Sketch\n\nknitr::include_graphics(\"sketch1.png\") # insert image"
+  },
+  {
+    "objectID": "ENVS-193DS_homework-03/code/codehw3.html#c.-draft-of-visualization",
+    "href": "ENVS-193DS_homework-03/code/codehw3.html#c.-draft-of-visualization",
+    "title": "codehw3",
+    "section": "c. Draft of Visualization",
+    "text": "c. Draft of Visualization\n\nknitr::include_graphics(\"IMG_0020.jpg\") # insert image"
+  },
+  {
+    "objectID": "ENVS-193DS_homework-03/code/codehw3.html#d.-artist-statement",
+    "href": "ENVS-193DS_homework-03/code/codehw3.html#d.-artist-statement",
+    "title": "codehw3",
+    "section": "d. Artist Statement",
+    "text": "d. Artist Statement\nThis piece shows the hidden emotion behind what appears to be very similar data, via a gradient with a ghoulish creature on one side with sharp, jagged, tortured surroundings to represent waking up with an alarm and a calm peaceful gnome with smooth features and background to represent waking up naturally, with similar wake up times and times to get out of bed I used some reference photos for the creatures from online but there wasn’t really any outside influence or style. The closest would be some form of dark fantasy style? The form of the work is on a drawing app using an apple pen. I create this by making the gradient background and then drawing on it using the app."
+  },
+  {
+    "objectID": "ENVS-193DS_homework-03/code/codehw3.html#a.-revise-and-summarize",
+    "href": "ENVS-193DS_homework-03/code/codehw3.html#a.-revise-and-summarize",
+    "title": "codehw3",
+    "section": "a. Revise and Summarize",
+    "text": "a. Revise and Summarize\nThe authors used panel data regression estimated using Ordinary Least Squares (OLS). Response variable is renewable electricity production and the predictor is Islam financing and Sukuk.\n\nknitr::include_graphics(\"islam_table.png\") #add in islam image"
+  },
+  {
+    "objectID": "ENVS-193DS_homework-03/code/codehw3.html#b.-visual-clarity",
+    "href": "ENVS-193DS_homework-03/code/codehw3.html#b.-visual-clarity",
+    "title": "codehw3",
+    "section": "b. Visual Clarity",
+    "text": "b. Visual Clarity\nThe table clearly represents the data underlying the statistical tests, and each column labeled and values are super precise. It includes coefficients, standard errors, t-statistics, p-values, and significance levels, which help to interpret the reliability of the work. The formatting is clean and makes it easy to compare variables."
+  },
+  {
+    "objectID": "ENVS-193DS_homework-03/code/codehw3.html#c.-aesthetic-clarity",
+    "href": "ENVS-193DS_homework-03/code/codehw3.html#c.-aesthetic-clarity",
+    "title": "codehw3",
+    "section": "c. Aesthetic Clarity",
+    "text": "c. Aesthetic Clarity\nThe aesthetic is and clean and doesn’t have too many grid lines, while important p values are highlighted nicely using asterisks, and the data is nicely spaced. The precise nature of the data can be a little overwhelming with all of the decimals, but it is still manageable."
+  },
+  {
+    "objectID": "ENVS-193DS_homework-03/code/codehw3.html#d.-suggestions",
+    "href": "ENVS-193DS_homework-03/code/codehw3.html#d.-suggestions",
+    "title": "codehw3",
+    "section": "d. Suggestions",
+    "text": "d. Suggestions\nConfidence intervals might help the data, and potentially coloring or bolding really important values could assist them further in getting their point across. For more readability, a key with definitions for all of the words could be of worth as well."
   }
 ]
