@@ -1,0 +1,175 @@
+---
+title: "codehw3"
+author: "Wyatt Dunn"
+date: 5/30/2025
+format: html
+---
+
+GitHub repo: https://github.com/wywydubs/ENVS-193DS_homework-03
+
+```{r set up, message=FALSE, warning=FALSE}
+message = FALSE # hide messages
+warning = FALSE # hide warning
+
+
+library(tidyverse) # Load packages
+library(here)
+library(gt) # chose gt
+
+library(janitor) # Optional packages
+library(readxl)
+library(readr)
+```
+
+
+
+# Problem 1 
+
+## a. Data Summarizing
+
+I could compare the average time it took to get out of bed comparing alarm used
+versus not used. I would want to know if getting out of bed after a natural 
+wake up could be different on average than from an alarm, as there are different
+factors like morning obligations hence an alarm versus less grogginess from 
+waking up naturally. This comparison could be done by finding the mean of days
+with alarm use and the mean of no alarm use, and it could inform me more about
+the impact of alarms on my morning routine. 
+
+## b. Visualization
+
+```{r visualization , message=FALSE, warning=FALSE}
+message = FALSE # hide messages
+warning = FALSE # hide warning
+
+sleep_log <- read_csv("../data/sleep_log.csv") #read in data
+
+
+ggplot(sleep_log, aes(x = `Alarm used?`, # set x and y
+                      y = `Time it took to get out of bed (min)`)) +
+  geom_jitter(width = 0.2, height = 0, aes(color = `Alarm used?`)) +
+  stat_summary(fun = mean, geom = "point", 
+               shape = 18, size = 4, color = "black") + # add in mean
+  stat_summary(fun.data = mean_se, geom = "errorbar", 
+               width = 0.2, color = "black") + #add in error bars
+  labs(
+    title = "Minutes to Get Out of Bed with vs without Alarm", 
+    x = "Alarm Used?",
+    y = "Minutes to Get Out of Bed"
+    # change title + x and y titles
+  ) +
+  scale_color_manual(values = c("Yes" = "deeppink", "No" = "purple")) +
+  theme_minimal()
+# change theme to minimal and add color to values
+
+```
+
+## c. Caption
+
+Figure 1, above, titled "Minutes to Get Out of Bed", with two jitterplots,
+purple circular points representing days where alarms were not used and pink 
+circular points representing days when an alarm was used. The y axis represents
+how long it took to get out of bed, and the mean for each group is represented
+by a black diamond with error bars represented by black bars. 
+
+
+## d. Table Presentation
+
+```{r tablegt}
+summary_table <- sleep_log |> # assign to sleep log
+  group_by(`Alarm used?`) |>  # set categories
+  summarise(
+    `Average time to get out of bed (min)` = 
+      round(mean(`Time it took to get out of bed (min)`, na.rm = TRUE), 1), 
+    # round data to one decimal point
+    sample = n() # add in sample size
+  )
+# Display with gt
+summary_table |> 
+  gt() |>  #use gt
+  tab_header(
+    title = "Average Time to Get Out of Bed", # set title
+    subtitle = "Grouped by Alarm Use" #set subtitle
+  )
+```
+
+
+# Problem 2 Affective Visualization
+
+## a. Description
+
+An affective visualization for my data could go a variety of ways. I think it 
+probably be focused around two very contrasting styles, maybe a jagged blue
+landscape with a darkened ghoul of some sort to represent days which require an 
+alarm wakeup. This could be contrasted by a smooth, warm hued style with a
+peaceful visually appealing creature in order to represent a natural wakeup. 
+This would evoke an emotional response to my topic that data obviously couldn't 
+convey. I want to do this and highlight the fact that besides my alarm wakeup,
+the data looks exactly the same, but the emotion behind it is very different.
+
+
+## b. Sketch
+
+```{r image 1}
+knitr::include_graphics("sketch1.png") # insert image
+```
+# Title: Similar Data, Different Story
+
+
+## c. Draft of Visualization
+
+```{r insert image 2}
+knitr::include_graphics("IMG_0020.jpg") # insert image
+```
+
+
+## d. Artist Statement
+
+
+
+This piece shows the hidden emotion behind what appears to be very similar data, 
+via a gradient with a ghoulish creature on one side with sharp, jagged, tortured 
+surroundings to represent waking up with an alarm and a calm peaceful gnome with 
+smooth features and background to represent waking up naturally, with similar 
+wake up times and times to get out of bed I used some  reference photos for the 
+creatures from online but there wasn't really any outside influence or style. 
+The closest would be some form of dark fantasy style? The form of the work is 
+on a drawing app using an apple pen. I create this by making the gradient 
+background and then drawing on it using the app. 
+
+
+# Problem 3
+
+
+## a. Revise and Summarize
+
+The authors used panel data regression estimated using Ordinary Least Squares 
+(OLS). Response variable is renewable electricity production and the predictor 
+is Islam financing and Sukuk. 
+
+```{r insert image 3}
+knitr::include_graphics("islam_table.png") #add in islam image
+```
+
+## b. Visual Clarity
+
+The table clearly represents the data underlying the statistical tests, and 
+each column labeled and values are super precise. It includes coefficients, 
+standard errors, t-statistics, p-values, and significance levels, which help to
+interpret the reliability of the work. The formatting is clean and makes it easy
+to compare variables.
+
+## c. Aesthetic Clarity
+
+The aesthetic is and clean and doesn't have too many grid lines, while important 
+p values are highlighted nicely using asterisks, and the data is nicely spaced. 
+The precise nature of the data can be a little overwhelming with all of the 
+decimals, but it is still manageable.
+
+## d. Suggestions
+
+Confidence intervals might help the data, and potentially coloring or bolding 
+really important values could assist them further in getting their point across.
+For more readability, a key with definitions for all of the words could be of 
+worth as well. 
+
+
