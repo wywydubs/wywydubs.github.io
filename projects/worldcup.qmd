@@ -6,5 +6,5 @@ image: projectphotos/193.jpg
 ---
 <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vRg8rL-U3PNcbV5H9p6f7fbC9aYczaSjP5EeMfHo7SBLUgbaGL96iQg8U9Ben9vuM9zA2ScNXoKok7P/pubembed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
 
-Completed in Spring 2025, the culminating class for Environmental Studies 193PE (Introduction to Political Ecology), was to investigate and present a ~20 minute research question in relation to any given environmental topic. Along with this, subsequent application of Political Ecology concepts to the topic were required, drawing on Paul Robbin's "Political Ecology: A Critical Introduction (2019)" found [here](https://www.google.com/books/edition/Political_Ecology/wAe1DwAAQBAJ?hl=en&gbpv=0).
+Completed in Spring quarter 2025, the culminating class for Environmental Studies 193PE (Introduction to Political Ecology), was to investigate and present a ~20 minute research question in relation to any given environmental topic. Along with this, subsequent application of Political Ecology concepts to the topic were required, drawing on Paul Robbin's "Political Ecology: A Critical Introduction (2019)" found [here](https://www.google.com/books/edition/Political_Ecology/wAe1DwAAQBAJ?hl=en&gbpv=0).
 ---
