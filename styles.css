@@ -1,1 +1,15 @@
 /* css styles */
+body {
+  font-family: "Inter", sans-serif;
+  font-size: 17px;
+  line-height: 1.6;
+  color: #e0e0e0;
+}
+
+a {
+  color: #61dafb;
+}
+a:hover {
+  text-decoration: underline;
+  color: #ffd700;
+}
